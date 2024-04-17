@@ -59,7 +59,7 @@
             </div>
             <div class="card cor col-md-3 col-5">
             <a href="" class="link">
-                 <h3 class="card-title">Café</h3>
+                 <h3 class="card-title">Cafe</h3>
                  </a>
                 </div>
 
