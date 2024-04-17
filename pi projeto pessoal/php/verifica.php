@@ -1,4 +1,4 @@
-<?php
+<?php //verifica se está logado
 
 require 'connect.php';
 
@@ -17,4 +17,3 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
 
 
 ?>
-

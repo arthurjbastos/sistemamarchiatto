@@ -23,7 +23,7 @@ class Usuario{
         }
     }
 
-    public function logado($id){
+    public function logado($id){ //Pega nome do usuário na Database p/ mostrar na tela de admin
         global $pdo;
 
         $array = array();
