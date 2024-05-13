@@ -13,16 +13,17 @@ try {
             <th>Ações</th></tr></thead><tbody>";
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr><td>".$row['idCliente']."</td>
+            echo "<tr class='table-selecionada' ><td>".$row['idCliente']."</td>
             <td>".$row['nome']."</td>
             <td>".$row['telefone']."</td>
             <td>
                 <form action='../php/deletar_cliente.php' method='post' style='display: inline-block;'>
                     <input type='hidden' name='idCliente' value='".$row['idCliente']."'>
-                    <input style='width: 50px; margin: 5px;' type='submit' value='Excluir'>
+                    <input class='botaoexcluir'style='width: 50px; margin: 5px;' type='submit' value='Excluir'>
                 </form>
-                <button onclick='openModal(\"myModal".$row['idCliente']."\")'>Atualizar</button>
-            </td></tr>";
+                <button class='botaoatualizar'onclick='openModal(\"myModal".$row['idCliente']."\")'>Atualizar</button>
+                <button class='botaopedidos' onclick='openPedidosModal(\"" . $row['nome'] . "\")'>Pedidos</button>
+                </td></tr>";
         }
         echo "</tbody>";
     } else {
