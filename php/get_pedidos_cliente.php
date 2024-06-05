@@ -5,8 +5,7 @@ if (isset($_GET['clienteNome'])) {
     $clienteNome = $_GET['clienteNome'];
 
     try {
-        // Consulta SQL para obter os pedidos do cliente
-        $sql = "SELECT p.id, pr.nome AS produto, p.preco_produto, p.data_pedido
+        $sql = "SELECT p.id, c.nome AS cliente, pr.nome AS produto, p.preco_produto, DATE_FORMAT(p.data_pedido, '%d/%m/%Y %H:%i:%s') AS data_formatada, p.atendido
                 FROM pedidos p
                 INNER JOIN clientes c ON p.cliente_id = c.idCliente
                 INNER JOIN produtos pr ON p.produto_id = pr.id
@@ -33,7 +32,7 @@ if (isset($_GET['clienteNome'])) {
                                 <td>" . $row['id'] . "</td>
                                 <td>" . $row['produto'] . "</td>
                                 <td>R$ " . number_format($row['preco_produto'], 2, ',', '.') . "</td>
-                                <td>" . $row['data_pedido'] . "</td>
+                                <td>" . $row['data_formatada'] . "</td>
                             </tr>";
             }
             $result .= "</table>";

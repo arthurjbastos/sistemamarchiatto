@@ -32,6 +32,10 @@ div.formulario{
     height: 270px;
 }
 
+#novo-admin{
+    height: 270px;
+}
+
 #novo-produto {
     height: auto; 
 }

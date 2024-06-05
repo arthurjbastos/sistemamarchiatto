@@ -11,9 +11,7 @@
 <body class="espaco_cabecalho">
 
     <?php
-    // Inclua o arquivo de verificação
     require '../php/verifica.php';
-    // Inclua o cabeçalho
     require_once 'cabecalho.php';
 
     if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
@@ -30,7 +28,7 @@
         <div>
             <!-- Criação da tabela de pedidos -->
             <?php
-            // Inclua o arquivo de conexão com o banco de dados
+            // Inclui o arquivo de conexão com o banco de dados
             include ("../php/connect.php");
 
             // Consulta SQL para obter os pedidos

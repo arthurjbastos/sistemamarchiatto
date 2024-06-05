@@ -1,12 +1,9 @@
 <?php
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Inclui o arquivo de conexão com o banco de dados
     include("../php/connect.php");
 
-    // Verifica se todos os campos necessários foram enviados
     if (isset($_POST['cliente']) && isset($_POST['produto']) && isset($_POST['preco_total'])) {
-        // Obtém os valores dos campos do formulário
         $clienteId = $_POST['cliente'];
         $produtoId = $_POST['produto'];
         $precoTotal = $_POST['preco_total'];
@@ -24,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../admin/admin.php?sucesso_pedido=1");
             exit();
         } catch (PDOException $e) {
-            // Em caso de erro, exibe uma mensagem de erro
             echo "Erro: " . $e->getMessage();
         }
     } else {

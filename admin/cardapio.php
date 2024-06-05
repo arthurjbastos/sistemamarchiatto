@@ -110,7 +110,7 @@
                 <label for='nova_categoria'>Nova Categoria:</label>
                 <select id='nova_categoria' name='nova_categoria'>";
 
-            // Loop p/ exibir todas as categorias como opções de um dropdown menu, deve ter um jeito mais prático
+            // Loop p/ exibir todas as categorias como opções de um dropdown menu
             while ($categoria = $stmt_categorias->fetch(PDO::FETCH_ASSOC)) {
                 echo "<option value='" . $categoria['id'] . "'" . ($row['categoria_id'] == $categoria['id'] ? " selected" : "") . ">" . $categoria['nome'] . "</option>";
             }

@@ -1,5 +1,5 @@
 <?php
-require_once 'connect.php'; // Importa o arquivo de conexão com o banco de dados
+require_once 'connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_pedido = $_POST['id_pedido'];
@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':id_pedido', $id_pedido);
     $stmt->execute();
 
-    // Redireciona de volta para a página de pedidos
     header("Location: ../admin/pedidos.php");
     exit();
 }
