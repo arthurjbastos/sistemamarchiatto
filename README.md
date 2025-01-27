@@ -1,4 +1,6 @@
-﻿
+﻿LINK PARA O VÍDEO DO PROJETO: 
+https://youtu.be/yTVO9G5GYhA
+
 # Projeto Integrador I
 # Otimização do atendimento em uma cafeteria através de aplicação web.
 
